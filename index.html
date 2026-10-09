@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata Anggota Kelompok 1</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #f0f2f5;
+            color: #333;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        /* Pembungkus Utama agar Halaman Terpusat & Rapi */
+        .wrapper {
+            width: 100%;
+            max-width: 1200px;
+            background: #ffffff;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        /* HEADER */
+        header {
+            background-color: #ffffff;
+            padding: 30px 20px;
+            text-align: center;
+            border-bottom: 4px solid #0056b3;
+            position: relative;
+        }
+        header h1 {
+            color: #0056b3;
+            font-size: 28px;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        header p {
+            color: #666;
+            font-size: 15px;
+        }
+
+        /* NAVIGASI */
+        nav {
+            background-color: #1e293b;
+            padding: 12px;
+            text-align: center;
+        }
+        nav a {
+            color: #f8fafc;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        /* KONTEN UTAMA & ASIDE */
+        .main-container {
+            display: flex;
+            flex-direction: row;
+            padding: 25px;
+            gap: 25px;
+        }
+        @media (max-width: 900px) {
+            .main-container {
+                flex-direction: column;
+            }
+        }
+
+        /* GRID KARTU ANGGOTA (2 Kolom Sejajar) */
+        main {
+            flex: 3;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+        @media (max-width: 650px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* KARTU PROFIL (Tinggi Seragam) */
+        .card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+        }
+
+        /* FOTO PROFIL BULAT */
+        .profile-img {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            background-color: #cbd5e1;
+            margin-bottom: 15px;
+            border: 3px solid #0056b3;
+            object-fit: cover;
+        }
+
+        .card h3 {
+            font-size: 18px;
+            color: #0f172a;
+            margin-bottom: 15px;
+            text-align: center;
+            font-weight: 700;
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 8px;
+            width: 100%;
+        }
+
+        /* TABEL BIODATA (Sejajar Sempurna) */
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13.5px;
+        }
+        .info-table td {
+            padding: 6px 0;
+            vertical-align: top;
+            color: #334155;
+        }
+        .info-table td.label {
+            font-weight: 600;
+            width: 85px;
+            color: #64748b;
+        }
+        .info-table td.colon {
+            width: 15px;
+            text-align: center;
+            color: #64748b;
+        }
+        .info-table a {
+            color: #0056b3;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .info-table a:hover {
+            text-decoration: underline;
+        }
+
+        /* ASIDE (SIDEBAR KANAN) */
+        aside {
+            flex: 1;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 25px;
+            border-radius: 10px;
+            height: fit-content;
+        }
+        aside h2 {
+            color: #0f172a;
+            font-size: 18px;
+            margin-bottom: 12px;
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 5px;
+        }
+        aside p {
+            font-size: 13.5px;
+            line-height: 1.6;
+            color: #475569;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #1e293b;
+            color: #94a3b8;
+            text-align: center;
+            padding: 15px;
+            font-size: 13px;
+            border-top: 1px solid #334155;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <!-- HEADER ELEMEN -->
+        <header>
+            <h1>Kelompok 1</h1>
+            <p>Desain UI/UX & Pemrograman Web | Praktikum 1: Dasar-Dasar HTML</p>
+        </header>
+
+        <!-- NAVIGASI ELEMEN -->
+        <nav>
+            <a href="#">Beranda</a>
+            <a href="#">Anggota</a>
+            <a href="#">Kontak</a>
+        </nav>
+
+        <!-- AREA KONTEN UTAMA -->
+        <div class="main-container">
+            
+            <!-- LIST KARTU ANGGOTA -->
+            <main>
+                
+                <!-- Anggota 1 -->
+                <article class="card">
+                    <img class="profile-img" src="assets/img/gazy.jpeg" alt="Foto Ghazy">
+                    <h3>M. Ghazy Aulia Ramadhan</h3>
+                    <table class="info-table">
+                        <tr><td class="label">NIM</td><td class="colon">:</td><td>0110226180</td></tr>
+                        <tr><td class="label">TTL</td><td class="colon">:</td><td>Jakarta, 08 Oktober 2006</td></tr>
+                        <tr><td class="label">Hobi</td><td class="colon">:</td><td>Main Games</td></tr>
+                        <tr><td class="label">Instagram</td><td class="colon">:</td><td><a href="https://instagram.com" target="_blank">@ramaakok</a></td></tr>
+                        <tr><td class="label">Email</td><td class="colon">:</td><td>mgar0810@gmail.com</td></tr>
+                    </table>
+                </article>
+
+                <!-- Anggota 2 -->
+                <article class="card">
+                    <img class="profile-img" src="assets/img/gaza.jpeg" alt="Foto Gaza">
+                    <h3>Muhammad Gaza Nur Ilmi</h3>
+                    <table class="info-table">
+                        <tr><td class="label">NIM</td><td class="colon">:</td><td>0110226174</td></tr>
+                        <tr><td class="label">TTL</td><td class="colon">:</td><td>Jakarta, 15 Februari 2007</td></tr>
+                        <tr><td class="label">Hobi</td><td class="colon">:</td><td>Jalan-jalan</td></tr>
+                        <tr><td class="label">Instagram</td><td class="colon">:</td><td><a href="https://instagram.com" target="_blank">@zaa.illm</a></td></tr>
+                        <tr><td class="label">Email</td><td class="colon">:</td><td>ilmigaza@gmail.com</td></tr>
+                    </table>
+                </article>
+
+                <!-- Anggota 3 -->
+                <article class="card">
+                    <img class="profile-img" src="assets/img/hadid.jpeg" alt="Foto Hadid">
+                    <h3>Muhammad Hadid Mubarok</h3>
+                    <table class="info-table">
+                        <tr><td class="label">NIM</td><td class="colon">:</td><td>0110226070</td></tr>
+                        <tr><td class="label">TTL</td><td class="colon">:</td><td>Depok, 29 April 2008</td></tr>
+                        <tr><td class="label">Hobi</td><td class="colon">:</td><td>Boxing, baca komik, Film, Musik, Olahraga, Game</td></tr>
+                        <tr><td class="label">Instagram</td><td class="colon">:</td><td><a href="https://instagram.com" target="_blank">@hadid9155</a></td></tr>
+                        <tr><td class="label">Email</td><td class="colon">:</td><td>muhammadhadidmubarok@gmail.com</td></tr>
+                    </table>
+                </article>
+
+                <!-- Anggota 4 -->
+                <article class="card">
+                    <img class="profile-img" src="assets/img/hamdani.jpeg" alt="Foto Hamdani">
+                    <h3>Muhammad Hamdani</h3>
+                    <table class="info-table">
+                        <tr><td class="label">NIM</td><td class="colon">:</td><td>0110226001</td></tr>
+                        <tr><td class="label">TTL</td><td class="colon">:</td><td>Sukabumi, 01 Maret 2007</td></tr>
+                        <tr><td class="label">Hobi</td><td class="colon">:</td><td>Scrolling, futsal, games</td></tr>
+                        <tr><td class="label">Instagram</td><td class="colon">:</td><td><a href="https://instagram.com" target="_blank">@mhmdhmdni01</a></td></tr>
+                        <tr><td class="label">Email</td><td class="colon">:</td><td>muhammad.muhammadhamdani22@gmail.com</td></tr>
+                        <tr><td class="label">Bio</td><td class="colon">:</td><td><span style="font-style: italic; color: #0284c7; font-weight: 600;">Bismillah web developer</span></td></tr>
+                    </table>
+                </article>
+
+                                <!-- Anggota 5 -->
+                <article class="card">
+                    <img class="profile-img" src="assets/img/ibnu.jpeg" alt="Foto Hadid">
+                    <h3>Muhammad Ibnu Fajar</h3>
+                    <table class="info-table">
+                        <tr><td class="label">NIM</td><td class="colon">:</td><td>0110224214</td></tr>
+                        <tr><td class="label">TTL</td><td class="colon">:</td><td>Lampung, 04 April 2006</td></tr>
+                        <tr><td class="label">Hobi</td><td class="colon">:</td><td>Tidur</td></tr>
+                        <tr><td class="label">Instagram</td><td class="colon">:</td><td><a href="https://instagram.com" target="_blank">fajarribnu_0404</a></td></tr>
+                        <tr><td class="label">Email</td><td class="colon">:</td><td>0110224214@student.nurulfikri.ac.id</td></tr>
+                    </table>
+                </article>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pemesanan Pizza</title>
+</head>
+<body>
+    <h1>Form Pemesanan Pizza</h1>
+    <p>Silakan isi form pemesanan pizza di bawah ini sesuai dengan pesanan Anda.</p>
+    
+    <form action="hasil.html" method="get">
+        <fieldset>
+            <legend>Informasi Pesanan</legend>
+            <p>
+                <label for="customername">Nama:</label>
+                <input type="text" id="customername" name="customername" required>
+            </p>
+
+            <p>
+                <label for="address">Alamat:</label>
+                <input type="text" id="address" name="address" required>
+            </p>
+
+            <p>
+                <label for="telepon">Telepon:</label>
+                <input type="tel" id="telepon" name="telepon" required>
+            </p>
+
+            <p>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </p>
+
+            <p>
+                <label for="instruction">Delivery Instruction:</label><br>
+                <textarea
+                    id="instruction"
+                    name="instruction"
+                    rows="4"
+                    cols="50"
+                    maxlength="400"
+                    placeholder="No more than 400 characters"></textarea>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Design Your Dream Pizza</legend>
+            
+            <p><strong>Pizza Crust (Pilih Salah Satu):</strong></p>
+            <p>
+                <!-- Menggunakan type="radio" agar hanya bisa pilih 1 -->
+                <input type="radio" id="crust_classic" name="crust" value="classic white" required>
+                <label for="crust_classic">Classic White</label><br>
+            
+                <input type="radio" id="crust_peperoni" name="crust" value="peperoni white">
+                <label for="crust_peperoni">Peperoni White</label><br>
+          
+                <input type="radio" id="crust_ayam" name="crust" value="ayam white">
+                <label for="crust_ayam">Ayam White</label><br>
+            </p>
+
+            <p><strong>Toppings (Opsional):</strong></p>
+            <p>
+                <!-- Atribut required dihapus agar tidak wajib dicentang semua -->
+                <input type="checkbox" id="top_sauce" name="toppings" value="sauce">
+                <label for="top_sauce">Sauce</label><br>
+            
+                <input type="checkbox" id="top_white_sauce" name="toppings" value="white sauce">
+                <label for="top_white_sauce">White Sauce</label><br>
+          
+                <input type="checkbox" id="top_mozarella" name="toppings" value="mozarella cheese">
+                <label for="top_mozarella">Mozzarella Cheese</label><br>
+            
+                <input type="checkbox" id="top_pepperoni" name="toppings" value="pepperoni">
+                <label for="top_pepperoni">Pepperoni</label><br>
+            </p>
+
+            <p>
+                <label for="quantity">Quantity:</label>
+                <select id="quantity" name="quantity" required>
+                    <option value="">--Pilih Jumlah--</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select> <!-- Tag penutup disisipkan di sini -->
+            </p>
+        </fieldset>
+
+        <p>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </p>
+    </form>
+</body>
+</html>
